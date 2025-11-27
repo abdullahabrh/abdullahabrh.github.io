@@ -1,139 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Abdullah Abdulrahim – CV & Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <style>
-    :root {
-      --bg: #f4f5f7;
-      --fg: #222;
-      --accent: #2b5caa;
-      --card: #ffffff;
-      --soft-border: #e4e4e4;
-    }
-
+    /* ---------------- GLOBAL STYLE ---------------- */
     body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 0;
       padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
+      background: #f6f6f6;
+      color: #222;
+      line-height: 1.55;
     }
 
     .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: var(--card);
+      max-width: 880px;
+      margin: 40px auto 60px;
+      background: #ffffff;
       padding: 40px 32px;
-      border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     }
 
-    /* HEADER */
-    header {
+    h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 12px;
+      font-size: 1.55rem;
+      font-weight: 650;
+      border-bottom: 2px solid #e8e8e8;
+      padding-bottom: 4px;
+    }
+
+    .subheadline {
+      font-size: 1.05rem;
+      color: #444;
+      margin-top: 6px;
+      margin-bottom: 14px;
+    }
+
+    .summary {
+      max-width: 620px;
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 16px;
+    }
+
+    .header {
       display: flex;
       justify-content: space-between;
-      gap: 24px;
-      border-bottom: 1px solid var(--soft-border);
-      padding-bottom: 20px;
-      margin-bottom: 32px;
-      align-items: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
-    .header-text h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: var(--fg);
+    /* ---------------- PHOTO ---------------- */
+    .photo-wrapper {
+      flex-shrink: 0;
     }
 
-    .header-text p {
-      margin: 4px 0;
-      font-size: 1rem;
+    .photo {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ddd;
     }
 
-    .contact {
-      font-size: 0.92rem;
-      text-align: right;
-      line-height: 1.4;
+    /* ---------------- CONTACT ---------------- */
+    .contact p {
+      margin: 3px 0;
+      font-size: 0.95rem;
     }
 
     .contact a {
-      color: var(--accent);
+      color: #0b59d1;
       text-decoration: none;
-      font-weight: 500;
     }
+
     .contact a:hover {
       text-decoration: underline;
     }
 
-    /* PHOTO */
-    .profile-photo {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid var(--soft-border);
+    /* ---------------- EXPERIENCE ---------------- */
+    .exp-block {
+      margin-bottom: 32px;
     }
 
-    h2 {
-      margin-top: 34px;
-      margin-bottom: 12px;
-      font-size: 1.45rem;
-      border-bottom: 2px solid var(--soft-border);
-      padding-bottom: 4px;
-      color: var(--fg);
+    .employer {
+      font-size: 1.25rem;
+      font-weight: 650;
+      margin-bottom: 2px;
     }
 
-    .section-item {
-      margin-bottom: 22px;
-    }
-
-    .section-item-title {
-      font-weight: 600;
+    .role {
       font-size: 1.05rem;
+      color: #333;
+      margin-bottom: 2px;
     }
 
-    .section-item-subtitle {
+    .period-location {
       font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 6px;
+      color: #666;
+      margin-bottom: 10px;
     }
 
     ul {
+      padding-left: 22px;
       margin-top: 6px;
-      padding-left: 20px;
     }
 
-    /* SKILLS TAGS */
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    /* ---------------- TAGS ---------------- */
     .tags {
-      margin-top: 10px;
+      margin-top: 8px;
     }
 
     .tag {
       display: inline-block;
-      background: #e9edf4;
-      color: #23395d;
+      background: #efefef;
       padding: 4px 10px;
-      border-radius: 50px;
-      margin: 4px 6px 4px 0;
-      font-size: 0.83rem;
-      font-weight: 500;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      margin-right: 6px;
+      margin-bottom: 6px;
+      color: #444;
     }
 
-    @media (max-width: 720px) {
-      header {
+    /* ---------------- MOBILE ---------------- */
+    @media (max-width: 650px) {
+      .header {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
       }
-      .contact {
-        text-align: center;
-      }
-      .profile-photo {
-        margin-top: 10px;
+
+      .photo {
+        width: 100px;
+        height: 100px;
       }
     }
   </style>
@@ -142,173 +156,166 @@
 <body>
   <div class="container">
 
-    <!-- HEADER -->
-    <header>
-      <div class="header-text">
+    <!-- ---------------- HEADER ---------------- -->
+    <div class="header">
+      <div>
         <h1>Abdullah Abdulrahim</h1>
-        <p>MA Economics, Data & Policy (Finance & Data Science)</p>
-        <p>Economics · Financial Markets · Data Science · Quantitative Analysis</p>
+        <div class="subheadline">
+          MA Economics, Data &amp; Policy (Finance &amp; Data Science)
+        </div>
+
+        <p class="summary">
+          I am a graduate student specializing in finance, quantitative methods and data science,
+          with experience in institutional and corporate banking, cloud computing, data engineering,
+          and applied econometrics. I combine economic reasoning with modern analytical tools and
+          machine learning, and I am interested in roles within central banks, international financial
+          institutions, and quantitative or analytics-driven teams.
+        </p>
+
+        <div class="contact">
+          <p>Vienna, Austria · Citizenship: Austria</p>
+          <p><a href="mailto:abdullah.abdulrahim@outlook.com">abdullah.abdulrahim@outlook.com</a></p>
+          <p><a href="https://www.linkedin.com/in/abdullah-abdulrahim-7b2b071a2/" target="_blank">LinkedIn</a></p>
+          <p><a href="https://github.com/abdullahabrh" target="_blank">GitHub</a></p>
+          <p>Website: abdullah.at (under construction)</p>
+        </div>
       </div>
 
-      <!-- Photo (must upload photo.jpg to your repo) -->
-      <img src="photo.jpg" alt="Profile Photo" class="profile-photo">
-    </header>
+      <div class="photo-wrapper">
+        <img class="photo" src="RBI_06016 (1).jpg" alt="Profile photo">
+      </div>
+    </div>
 
-    <!-- CONTACT -->
-    <div class="contact" style="margin-bottom: 20px;">
-      <p><a href="mailto:abdullah.abdulrahim@outlook.com">abdullah.abdulrahim@outlook.com</a></p>
-      <p>Vienna, Austria · Austrian Citizenship</p>
+    <!-- ---------------- EXPERIENCE ---------------- -->
+    <h2>Experience</h2>
+
+    <div class="exp-block">
+      <div class="employer">Raiffeisen Bank International (RBI)</div>
+      <div class="role">Institutional Clients – Student Support</div>
+      <div class="period-location">Jul 2024 – May 2025 · Vienna, Austria</div>
+      <ul>
+        <li>Maintained and updated institutional client data across internal systems, ensuring accuracy, completeness and full compliance with onboarding workflows and regulatory requirements.</li>
+        <li>Created reports and interactive dashboards in Excel and Power BI to support Relationship Managers with portfolio overviews, industry exposures, and client monitoring.</li>
+        <li>Conducted background research on macroeconomic and sector developments to support client discussions.</li>
+      </ul>
+    </div>
+
+    <div class="exp-block">
+      <div class="employer">Raiffeisen Bank International (RBI)</div>
+      <div class="role">Corporate Customers – Student Support</div>
+      <div class="period-location">Jun 2021 – Jun 2024 · Vienna, Austria</div>
+      <ul>
+        <li>Managed corporate client data and ensured high-quality, reliable records across multiple systems.</li>
+        <li>Prepared tailored documents, presentations, and summaries for internal and external corporate meetings.</li>
+        <li>Performed sector research for discussions with lending teams and corporate customers.</li>
+      </ul>
+    </div>
+
+    <!-- ---------------- EDUCATION ---------------- -->
+    <h2>Education</h2>
+
+    <div class="exp-block">
+      <div class="employer">Central European University</div>
+      <div class="role">MA Economics, Data &amp; Policy</div>
+      <div class="period-location">2024 – 2026 (expected) · Vienna, Austria</div>
+
+      <p><strong>Relevant coursework (finance, analytics & quantitative methods):</strong></p>
       <p>
-        <a href="https://www.linkedin.com/in/abdullah-abdulrahim-7b2b071a2/" target="_blank">LinkedIn</a> ·
-        <a href="https://github.com/abdullahhabrh" target="_blank">GitHub</a> ·
-        <a href="https://abdullah.at" target="_blank">abdullah.at</a>
+        Data Analysis 1–4 (Exploration, Regressions, Causal Analysis);  
+        Data Analysis 3: Prediction & Intro to ML;  
+        Scientific Python;  
+        Data Science 1 & 2;  
+        Data Engineering 1 (Cloud & Managed AI Solutions);  
+        Data Engineering 2 (Modern Data Platforms);  
+        Data Visualization;  
+        Trading & Portfolio Theory;  
+        Asset Pricing;  
+        Fixed Income Analysis;  
+        Corporate Finance & Risk Management;  
+        Financial Management;  
+        International Finance;  
+        Banking & Financial Institutions;  
+        Theory & Practice of Economic Forecasting;  
+        Macroeconomic Policy & Global Financial Markets.
       </p>
     </div>
 
-    <!-- ABOUT -->
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I am a Master’s student in Economics, Data & Policy at Central European University specializing in
-        finance, data science and quantitative methods. I previously completed a BA in Philosophy, Politics
-        & Economics and have several years of experience supporting institutional and corporate banking
-        teams at Raiffeisen Bank International in Vienna.
-      </p>
-      <p>
-        I am interested in roles at central banks, international financial institutions, hedge funds and
-        data/analytics teams where I can combine economic thinking with modern data tools,
-        cloud computing and quantitative finance.
-      </p>
-    </section>
+    <div class="exp-block">
+      <div class="employer">Central European University</div>
+      <div class="role">BA Philosophy, Politics & Economics</div>
+      <div class="period-location">2020 – 2024 · Vienna, Austria</div>
+      <p><strong>Selected coursework:</strong> Econometrics, Microeconomics, Statistics,
+        Geoeconomics, International Trade, Globalization & International Relations.</p>
+    </div>
 
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <h2>Experience</h2>
+    <!-- ---------------- SKILLS ---------------- -->
+    <h2>Skills</h2>
 
-      <div class="section-item">
-        <div class="section-item-title">Institutional Clients – Student Support · Raiffeisen Bank International</div>
-        <div class="section-item-subtitle">Jul 2024 – May 2025 · Vienna, Austria</div>
-        <ul>
-          <li>Maintained institutional client data across internal systems (KYC, onboarding, compliance, internal regulatory alignment).</li>
-          <li>Developed Excel and Power BI dashboards for monitoring portfolios and exposures.</li>
-          <li>Produced macroeconomic and industry research to support client engagement.</li>
-        </ul>
-      </div>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">R</span>
+      <span class="tag">SQL</span>
+      <span class="tag">Stata</span>
+      <span class="tag">EViews</span>
+      <span class="tag">Excel</span>
+      <span class="tag">Power BI</span>
+      <span class="tag">AWS (EC2, S3, Route 53)</span>
+      <span class="tag">Machine Learning</span>
+      <span class="tag">Data Engineering</span>
+      <span class="tag">Econometrics</span>
+      <span class="tag">Asset Pricing</span>
+      <span class="tag">Trading & Portfolio Theory</span>
+      <span class="tag">Cloud Computing</span>
+      <span class="tag">Data Visualization</span>
+    </div>
 
-      <div class="section-item">
-        <div class="section-item-title">Corporate Customers – Student Support · Raiffeisen Bank International</div>
-        <div class="section-item-subtitle">Jun 2021 – Jun 2024 · Vienna, Austria</div>
-        <ul>
-          <li>Prepared corporate client reports, presentations and financial summaries.</li>
-          <li>Improved data quality by organizing, updating and validating customer information.</li>
-          <li>Conducted market and industry research for relationship managers.</li>
-        </ul>
-      </div>
-    </section>
+    <!-- ---------------- PROJECTS ---------------- -->
+    <h2>Projects</h2>
 
-    <!-- EDUCATION -->
-    <section id="education">
-      <h2>Education</h2>
+    <div class="exp-block">
+      <div class="employer">Multi-City Business & Permitting Data Pipeline</div>
+      <div class="role">ECBS5294 – Introduction to Data Science</div>
+      <ul>
+        <li>Built an end-to-end data pipeline integrating ~70,000 records across heterogeneous CSV + JSON sources (Chicago licenses & NYC permits).</li>
+        <li>Loaded and processed data in DuckDB, converting data types, addressing missingness, and resolving schema inconsistencies.</li>
+        <li>Designed analytical tables to study licensing, permitting dynamics, and geographic patterns.</li>
+      </ul>
+    </div>
 
-      <div class="section-item">
-        <div class="section-item-title">MA Economics, Data & Policy · Central European University</div>
-        <div class="section-item-subtitle">2024 – 2026 (expected) · Vienna, Austria</div>
+    <div class="exp-block">
+      <div class="employer">AWS Cloud: EC2 Deployment + Streamlit</div>
+      <div class="role">Data Engineering 1 – Cloud Computing</div>
+      <ul>
+        <li>Set up AWS EC2 t4g.nano instance, configured SSH/HTTP security groups, managed key pairs, and deployed a Streamlit demo app.</li>
+        <li>Used Route 53 to configure DNS routing for a custom domain and tested cloud resource access.</li>
+      </ul>
+    </div>
 
-        <p><strong>Focus:</strong> Finance · Data Science · Quantitative Methods · Economic Policy</p>
+    <div class="exp-block">
+      <div class="employer">ETF Portfolio Optimization</div>
+      <div class="role">Trading & Portfolio Theory</div>
+      <ul>
+        <li>Analyzed SPY, BND, GLD monthly returns, constructed excess returns, computed volatility, Sharpe ratios, and correlations.</li>
+        <li>Used Excel Solver to derive mean-variance optimal risky portfolios and the capital allocation line.</li>
+      </ul>
+    </div>
 
-        <p><strong>Selected relevant coursework:</strong></p>
-        <p>
-          Data Analysis 1–4 ·  
-          Machine Learning (Prediction) ·  
-          Data Analysis with AI ·  
-          Scientific Python ·  
-          Data Science Projects ·  
-          Data Engineering 1 & 2 (Cloud Computing, Modern Data Platforms) ·  
-          Data Visualization & Storytelling ·  
-          Trading & Portfolio Theory ·  
-          Asset Pricing ·  
-          Banking & Financial Institutions ·  
-          Corporate Finance & Risk Management ·  
-          Fixed Income Analysis ·  
-          International Finance ·  
-          Theory & Practice of Economic Forecasting ·  
-          Macroeconomic Policy & Global Financial Markets
-        </p>
-      </div>
+    <div class="exp-block">
+      <div class="employer">Economic Forecasting Assignments</div>
+      <div class="role">Forecasting · Macroeconomic Policy · International Finance</div>
+      <ul>
+        <li>Performed forecasting/nowcasting using leading indicators (confidence indices, PMI, sentiment indices).</li>
+        <li>Evaluated Granger causality, cross-correlation, model fit and forecasting accuracy.</li>
+      </ul>
+    </div>
 
-      <div class="section-item">
-        <div class="section-item-title">BA Philosophy, Politics & Economics · Central European University</div>
-        <div class="section-item-subtitle">2020 – 2024 · Vienna, Austria</div>
-        <p>Relevant coursework: Econometrics · Statistics · Geoeconomics · International Trade · Microeconomics</p>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">R</span>
-        <span class="tag">SQL</span>
-        <span class="tag">DuckDB</span>
-        <span class="tag">STATA</span>
-        <span class="tag">EViews</span>
-        <span class="tag">Excel</span>
-        <span class="tag">Power BI</span>
-        <span class="tag">AWS (EC2, S3, Route 53)</span>
-        <span class="tag">Cloud Computing</span>
-        <span class="tag">Data Engineering</span>
-        <span class="tag">Machine Learning</span>
-        <span class="tag">Econometrics</span>
-        <span class="tag">Asset Pricing</span>
-        <span class="tag">Trading & Portfolio Theory</span>
-        <span class="tag">Macroeconomics</span>
-        <span class="tag">International Finance</span>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="section-item">
-        <div class="section-item-title">Cloud & Data Engineering – Multi-City Integration Pipeline</div>
-        <div class="section-item-subtitle">ECBS5294 – Introduction to Data Science</div>
-        <ul>
-          <li>Integrated ~70,000 records from Chicago business licenses (CSV) and NYC building permits (JSON) using DuckDB.</li>
-          <li>Resolved real-world data quality issues: missing values, inconsistent schemas, datatype mismatches and multi-format ingestion.</li>
-          <li>Built analytical datasets for regulatory comparisons, geographic analysis and policy insights.</li>
-        </ul>
-      </div>
-
-      <div class="section-item">
-        <div class="section-item-title">AWS Cloud Deployment – EC2, Security Groups & Streamlit Demo</div>
-        <div class="section-item-subtitle">Data Engineering 1</div>
-        <ul>
-          <li>Launched an Ubuntu EC2 instance (ARM-based t4g.nano), configured security groups and set up SSH key authentication.</li>
-          <li>Deployed a Streamlit demo app accessible publicly via port 80.</li>
-          <li>Implemented Route 53 DNS mapping and cleaned resources to optimize costs.</li>
-        </ul>
-      </div>
-
-      <div class="section-item">
-        <div class="section-item-title">ETF Portfolio Optimization – SPY, BND & GLD</div>
-        <div class="section-item-subtitle">Trading & Portfolio Theory</div>
-        <ul>
-          <li>Computed excess returns, Sharpe ratios, volatilities and correlations using historical ETF data.</li>
-          <li>Built the mean–variance optimal risky portfolio using Excel Solver.</li>
-          <li>Constructed capital allocation lines and translated allocations into actual ETF shares for a $100,000 portfolio.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:abdullah.abdulrahim@outlook.com">abdullah.abdulrahim@outlook.com</a></p>
-      <p>Website: <a href="https://abdullah.at" target="_blank">abdullah.at</a></p>
-    </section>
+    <!-- ---------------- CONTACT ---------------- -->
+    <h2>Contact</h2>
+    <p>
+      Email: <a href="mailto:abdullah.abdulrahim@outlook.com">abdullah.abdulrahim@outlook.com</a>
+    </p>
 
   </div>
 </body>
+
 </html>
