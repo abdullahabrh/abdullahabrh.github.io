@@ -42,6 +42,7 @@
     .header .contact {
       font-size: 0.95rem;
       margin-bottom: 12px;
+      line-height: 1.4;
     }
 
     .divider {
@@ -82,26 +83,30 @@
       margin-top: -22px;
     }
 
-    /* Lists */
     ul {
       margin-top: 6px;
       padding-left: 22px;
     }
 
-    /* Footer sections */
-    .footer-section {
-      margin-top: 28px;
-      margin-bottom: 20px;
+    /* Clean blocks for Workshops */
+    .block {
+      margin-bottom: 18px;
     }
 
-    .footer-section strong {
-      display: inline-block;
-      width: 170px;
+    .block-title {
+      font-weight: bold;
+      font-size: 1rem;
     }
 
-    .footer-section ul {
-      margin-top: 4px;
-      padding-left: 22px;
+    .block-org {
+      font-size: 0.96rem;
+      margin-top: 1px;
+    }
+
+    .block-date {
+      font-size: 0.9rem;
+      font-style: italic;
+      margin-top: 2px;
     }
 
     /* Links */
@@ -131,8 +136,7 @@
     <div class="contact">
       abdullah.abdulrahim@outlook.com |
       +43 664 8664564 |
-      Citizenship: Austria
-      <br>
+      Citizenship: Austria<br>
       <a href="https://www.linkedin.com/in/abdullah-abdulrahim-7b2b071a2/" target="_blank">LinkedIn</a> ·
       <a href="https://github.com/abdullahabrh" target="_blank">GitHub</a> ·
       <a href="https://abdullah.at" target="_blank">abdullah.at</a> (under construction)
@@ -141,18 +145,18 @@
 
   <div class="divider"></div>
 
-  <!-- ================= PROFILE SUMMARY ================= -->
-  <h2>Profile</h2>
+  <!-- ================= PROFILE ================= -->
+  <h2>PROFILE</h2>
   <p>
     A graduate student specializing in finance, quantitative methods and data science,
-    with experience in institutional and corporate banking, economic analysis,
-    and modern data engineering workflows. I combine economic reasoning with analytical tools,
-    cloud technologies, econometrics and portfolio theory. I am interested in roles within central banks,
-    international financial institutions, and quantitative or analytics-driven teams.
+    with experience in institutional and corporate banking, data engineering, and applied econometrics.
+    I combine economic reasoning with analytical tools, cloud technologies, econometrics and
+    portfolio theory. I am interested in roles within central banks, international financial
+    institutions, and quantitative or analytics-driven teams.
   </p>
 
   <!-- ================= EXPERIENCE ================= -->
-  <h2>Professional Experience</h2>
+  <h2>PROFESSIONAL EXPERIENCE</h2>
 
   <div class="item">
     <div class="item-title">Raiffeisen Bank International (RBI)</div>
@@ -161,9 +165,10 @@
     <ul>
       <li>Maintained and updated institutional client data across internal systems, ensuring accuracy,
           completeness and alignment with regulatory and KYC standards.</li>
-      <li>Built internal reports and dashboards using Excel and Power BI to support relationship managers
-          with data-driven client insights.</li>
-      <li>Conducted macroeconomic and industry research to support client discussions and briefing materials.</li>
+      <li>Created internal reports and dashboards in Excel and Power BI to support relationship managers
+          with data-driven client insights and portfolio monitoring.</li>
+      <li>Conducted research on macroeconomic indicators and sector trends to support discussions with
+          institutional clients.</li>
     </ul>
   </div>
 
@@ -172,27 +177,27 @@
     <div class="item-subtitle">Corporate Customers – Student Support</div>
     <div class="item-date">Jun 2021 – Jun 2024 · Vienna, Austria</div>
     <ul>
-      <li>Prepared client presentations and account summaries for corporate clients, ensuring consistency,
-          clarity and professional delivery.</li>
-      <li>Organized, standardized and audited corporate customer records to improve data quality and accessibility.</li>
+      <li>Prepared client presentations and account summaries for corporate customers, ensuring clarity,
+          consistency and professional delivery.</li>
+      <li>Organized, standardized and audited corporate customer records to improve data quality and
+          accessibility across departments.</li>
       <li>Supported relationship managers with industry research, financial summaries and internal reporting.</li>
     </ul>
   </div>
 
   <!-- ================= EDUCATION ================= -->
-  <h2>Education</h2>
+  <h2>EDUCATION</h2>
 
   <div class="item">
     <div class="item-title">Central European University (CEU)</div>
     <div class="item-subtitle">MA Economics, Data & Policy (Finance & Data Science)</div>
     <div class="item-date">2024 – 2026 (expected) · Vienna, Austria</div>
     <p><strong>Focus:</strong> Finance, quantitative methods, economic policy, data analytics.</p>
-    <p><strong>Key Coursework:</strong> Data Analysis (Exploration, Regression, Causal);
-      Prediction & ML; Scientific Python; Data Engineering (Cloud Computing, Modern Data Platforms);
-      Data Visualization; Portfolio Theory; Asset Pricing; Corporate Finance & Risk Management;
-      Financial Management; Banking; International Finance; Fixed Income Analysis;
-      Economic Forecasting; Macroeconomic Policy; International Economic Integration.
-    </p>
+    <p><strong>Key Coursework:</strong> Data Analysis (exploration, regression, causal inference);
+      Prediction & Machine Learning; Scientific Python; Data Engineering (cloud computing, modern data platforms);
+      Data Visualization; Portfolio Theory; Asset Pricing; Corporate Finance & Risk Management; Banking;
+      Financial Management; International Finance; Fixed Income Analysis; Theory & Practice of Economic Forecasting;
+      Macroeconomic Policy; International Economic Integration.</p>
   </div>
 
   <div class="item">
@@ -204,59 +209,117 @@
   </div>
 
   <!-- ================= PROJECTS ================= -->
-  <h2>Selected Projects</h2>
+  <h2>SELECTED PROJECTS</h2>
 
-  <div class="item">
-    <div class="item-title">Multi-City Business & Permitting Data Pipeline</div>
-    <div class="item-subtitle">Data Science & Data Engineering</div>
-    <ul>
-      <li>Integrated ~70,000 records from Chicago (CSV) and NYC (JSON), resolving schema differences,
-          performing type conversions and conducting data quality validation.</li>
-      <li>Used DuckDB, Python and SQL for ingestion, transformation and exploratory analysis.</li>
-      <li>Produced analytical tables and policy-relevant insights for regulatory and business intelligence use cases.</li>
-    </ul>
-  </div>
+  <!-- Data Engineering & Cloud Computing -->
+  <h3>DATA ENGINEERING & CLOUD COMPUTING</h3>
+  <ul>
+    <li>Provisioned ARM-based t4g.nano EC2 instances running Ubuntu, configured SSH key pairs,
+        and managed inbound rules through custom security groups (SSH 22, HTTP 80).</li>
+    <li>Used GitHub Codespaces for remote development, including SSH connections to EC2, port forwarding,
+        repository mounting, and VS Code terminal workflows.</li>
+    <li>Configured Route 53 DNS records, tested domain routing, and ensured correct propagation.</li>
+    <li>Created and configured S3 buckets, tested public access policies, handled object storage and
+        troubleshooting potential access-denied errors.</li>
+    <li>Deployed a Streamlit application on EC2, configured system services, and ensured stable performance
+        under HTTP traffic.</li>
+    <li>Followed structured cloud cleanup procedures by terminating instances, removing security groups,
+        and deleting key pairs to control costs.</li>
+    <li>Worked within cloud IAM constraints of university-managed accounts, including adapting deployment
+        strategies to limited permissions.</li>
+  </ul>
 
-  <div class="item">
-    <div class="item-title">AWS Cloud Deployment (EC2, Security Groups, Route 53)</div>
-    <div class="item-subtitle">Cloud Computing</div>
-    <ul>
-      <li>Provisioned and configured Ubuntu EC2 instances, SSH key pairs, security groups and HTTP access.</li>
-      <li>Deployed a Streamlit demo app and configured a Route 53 domain for public access.</li>
-    </ul>
-  </div>
+  <!-- SQL & Data Integration -->
+  <h3>SQL & DATA INTEGRATION PIPELINES</h3>
+  <ul>
+    <li>Built an end-to-end data integration pipeline combining Chicago Business Licenses (CSV)
+        and NYC Building Permits (JSON) totaling ~70,000 records.</li>
+    <li>Loaded heterogeneous formats into DuckDB, performed JSON flattening, parsing and type coercion
+        (dates, coordinates, numeric strings).</li>
+    <li>Handled real-world data quality issues such as missing values, duplicates, inconsistent schema design
+        and multi-record licensing events.</li>
+    <li>Designed staging tables, analytical views and comparison layers for cross-city analysis.</li>
+    <li>Generated insights into regulatory timelines, business activity density, and permit lifecycle patterns.</li>
+  </ul>
 
-  <div class="item">
-    <div class="item-title">Portfolio Optimization: SPY · BND · GLD</div>
-    <div class="item-subtitle">Trading & Portfolio Theory</div>
-    <ul>
-      <li>Constructed excess returns, estimated risk–return statistics and correlations for ETF assets.</li>
-      <li>Used Excel Solver to compute mean-variance optimal portfolios and complete portfolios for
-          different risk preferences.</li>
-    </ul>
-  </div>
+  <!-- Data Science & Econometrics -->
+  <h3>DATA SCIENCE & ECONOMETRICS</h3>
+  <ul>
+    <li>Applied regression models, prediction methods and causal inference frameworks in Python and R.</li>
+    <li>Conducted feature cleaning, missing-value handling, outlier detection and exploratory visualization.</li>
+    <li>Used STATA, Python and R for inference, hypothesis testing, model comparison and applied micro-econometric tasks.</li>
+    <li>Built machine-learning-ready datasets and employed PCA for dimensionality reduction.</li>
+  </ul>
 
-  <!-- ================= ADDITIONAL SKILLS ================= -->
-  <h2>Additional Skills & Workshops</h2>
+  <!-- Forecasting -->
+  <h3>ECONOMIC FORECASTING</h3>
+  <ul>
+    <li>Assessed forecasting performance of leading indicators (OECD confidence indicators, EC sentiment indices)
+        for Austrian GDP growth.</li>
+    <li>Ran cross-correlation analysis, Granger causality tests and regression-based forecasting models.</li>
+    <li>Compared indicator-based models with baseline macro models and interpreted results for policy relevance.</li>
+    <li>Performed nowcasting exercises and practical evaluation of short-term forecasting accuracy.</li>
+  </ul>
 
-  <div class="footer-section">
-    <strong>Languages:</strong>
+  <!-- Portfolio Theory -->
+  <h3>PORTFOLIO THEORY & ASSET PRICING</h3>
+  <ul>
+    <li>Processed monthly ETF data for SPY, BND and GLD, constructed excess returns and computed statistical summaries
+        (mean, SD, correlations).</li>
+    <li>Used Excel Solver to compute the mean-variance optimal risky portfolio and the capital allocation line.</li>
+    <li>Built complete portfolios for various investor risk aversion levels and converted results into actual ETF allocations.</li>
+    <li>Compared Sharpe ratios, diversification effects and sensitivity of weights to correlation structures.</li>
+  </ul>
+
+  <!-- Scientific Python -->
+  <h3>SCIENTIFIC PYTHON</h3>
+  <ul>
+    <li>Implemented vectorized operations and compared performance to loops using <code>timeit</code>.</li>
+    <li>Generated random data, histograms and line plots using <code>numpy</code> and <code>matplotlib</code>.</li>
+    <li>Practiced efficient data manipulation, memory-conscious computation and reproducible workflows
+        in notebooks.</li>
+  </ul>
+
+  <!-- ================= ADDITIONAL ================= -->
+  <h2>ADDITIONAL SKILLS & WORKSHOPS</h2>
+
+  <div class="block">
+    <div class="block-title">Languages</div>
     Arabic (native); English (C2); German (C2); French (B1)
   </div>
 
-  <div class="footer-section">
-    <strong>Technical Skills:</strong>
+  <div class="block">
+    <div class="block-title">Technical Skills</div>
     Python; STATA; R; SQL; EViews; AWS; Power BI; Excel
   </div>
 
-  <div class="footer-section">
-    <strong>Workshops & Conferences:</strong>
-    <ul>
-      <li><strong>Promotion of Think Tanks on Socio-Economic Reforms</strong> – German Council on Foreign Relations (Berlin/Amman, Apr/Jun 2019)</li>
-      <li><strong>Public Finance & Economic Policy Workshop</strong> – Open Society University Network (OSUN), Economic Democracy Initiative (New York, Jun 2022)</li>
-      <li><strong>European Forum Alpbach</strong> – Committee Representative, Thematic Track “Finance & Economy” (Vienna/Alpbach, 2022–2024)</li>
-      <li><strong>London Critical Theory Summer School</strong> – Birkbeck, University of London (London, Jun/Jul 2024)</li>
-    </ul>
+  <div class="block">
+    <div class="block-title">Workshops & Conferences</div>
+
+    <div class="block">
+      <div class="block-title">Promotion of Think Tanks on Socio-Economic Reforms</div>
+      <div class="block-org">German Council on Foreign Relations</div>
+      <div class="block-date">Berlin & Amman · Apr/Jun 2019</div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Public Finance & Economic Policy Workshop</div>
+      <div class="block-org">Open Society University Network (OSUN), Economic Democracy Initiative</div>
+      <div class="block-date">New York · Jun 2022</div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">European Forum Alpbach</div>
+      <div class="block-org">Committee Representative · Thematic Track “Finance & Economy”</div>
+      <div class="block-date">Vienna & Alpbach · 2022–2024</div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">London Critical Theory Summer School</div>
+      <div class="block-org">Birkbeck, University of London</div>
+      <div class="block-date">London · Jun/Jul 2024</div>
+    </div>
+
   </div>
 
 </div>
