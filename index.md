@@ -1,7 +1,9 @@
 ---
-layout: default
-title: Home
+layout: single
+title: <Page Name>
+permalink: /<page-name>/
 ---
+
 
 # Abdullah Abdulrahim
 
