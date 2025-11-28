@@ -5,7 +5,15 @@ title: Home
 
 # Abdullah Abdulrahim
 
-Master’s student in Economics, Data & Policy  
-Finance · Data Science · Policy · Portfolio Theory
+MA Economics, Data & Policy  
+Finance · Data Science · Quantitative Economics
 
-Welcome to my personal website. I combine economics, statistics, econometrics, and machine learning with experience in trading, data analysis, and banking.
+Welcome to my website.  
+You can find my **CV**, **projects**, and **contact information** here.
+
+---
+
+### 🔗 Quick Links
+- [CV](cv.md)
+- [Projects](projects.md)
+- [Contact](contact.md)
