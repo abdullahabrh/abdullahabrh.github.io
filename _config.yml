@@ -1,3 +1,27 @@
-theme: jekyll-theme-minimal
-title: Abdullah Abdulrahim
-description: Personal Site — CV
+title: "Abdullah Abdulrahim"
+subtitle: "Economics · Finance · Data Science"
+
+theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes"
+
+# Site settings
+name: "Abdullah Abdulrahim"
+email: "abdullah.abdulrahim@outlook.com"
+github_username: "abdullahabrh"
+linkedin_username: "abdullah-abdulrahim-7b2b071a2"
+
+minimal_mistakes_skin: "default"
+
+# Build settings
+markdown: kramdown
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: /
+  - title: "CV"
+    url: /cv
+  - title: "Projects"
+    url: /projects
+  - title: /contact
+    url: /contact
